@@ -91,6 +91,10 @@ class Image(models.Model):
         return location
 
 
+    def __str__(self):
+        return self.imageName
+
+
 
 
 
