@@ -36,6 +36,18 @@ class Category(models.Model):
 
 
 
+    @classmethod
+    def updateCategory(cls, id, value):
+        cls.objects.filter(id=id).update(image=value)
+
+
+
+
+
+
+
+
+
 
 
 
