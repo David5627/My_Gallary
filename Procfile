@@ -1,0 +1,1 @@
+web: gunicorn Mae_Gallary.wsgi --log-file -
