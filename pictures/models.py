@@ -41,7 +41,8 @@ class Category(models.Model):
         cls.objects.filter(id=id).update(image=value)
 
 
-
+    def __str__(self):
+        return self.categoryName
 
 
 
