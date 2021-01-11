@@ -56,7 +56,9 @@ class Image(models.Model):
     image = models.ImageField(upload_to='images/',default='jpg')
 
 
-    
+    def saveImage(self):
+        self.save()
+
 
 
 
