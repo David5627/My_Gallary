@@ -31,7 +31,12 @@ class Category(models.Model):
 
 
 
+    def deleteCategory(self):
+        self.delete()
 
 
-        
+
+
+
+
 
