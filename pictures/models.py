@@ -61,6 +61,11 @@ class Image(models.Model):
 
 
 
+    def deleteImage(self):
+        self.delete()
+
+
+
 
 
 
