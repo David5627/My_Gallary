@@ -7,3 +7,6 @@ class Location(models.Model):
 
     def saveLocation(self):
         self.save()
+
+    def deleteLocation(self):
+        self.delete()
