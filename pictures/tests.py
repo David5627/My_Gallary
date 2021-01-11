@@ -6,13 +6,13 @@ from .models import Image, Category, Location
 
 class TestImage(TestCase):
     def setUp(self):
-        self.location = Location(locationName='Kinoo')
+        self.location = Location(locationName='Kiambu')
         self.location.saveLocation()
 
-        self.category = Category(categoryName='food')
+        self.category = Category(categoryName='job')
         self.category.saveCategory()
 
-        self.testInstance = Image(id=1, imageName='IMG__001', imageDescription=' a test image', imageLocation=self.location,
+        self.testInstance = Image(id=1, imageName='IMG.jpg', imageDescription=' a test image', imageLocation=self.location,
                                 imageCategory=self.category)
 
     def test_instance(self):
@@ -41,7 +41,7 @@ class TestImage(TestCase):
 
     def test_search_image_by_location(self):
         self.testInstance.saveImage()
-        foundImages = self.testInstance.filterimageByLocation(imageLocation='kinoo')
+        foundImages = self.testInstance.filterimageByLocation(imageLocation='Kiambu')
         self.assertTrue(len(found_images) == 1)
 
     def test_search_image_by_category(self):
@@ -57,7 +57,7 @@ class TestImage(TestCase):
 
 class TestLocation(TestCase):
     def setUp(self):
-        self.location = Location(name='kinoo')
+        self.location = Location(name='kiambu')
         self.location.saveLocation()
 
     def test_instance(self):
@@ -81,7 +81,7 @@ class TestLocation(TestCase):
 
 class CategoryTestClass(TestCase):
     def setUp(self):
-        self.category = Category(name='food')
+        self.category = Category(name='job')
         self.category.saveCategory()
 
     def test_instance(self):
