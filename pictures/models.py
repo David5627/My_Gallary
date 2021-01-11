@@ -85,6 +85,14 @@ class Image(models.Model):
 
 
 
+    @classmethod
+    def filterimageByLocation(cls,location):
+        location = cls.objects.filter(imageLocation__locationName = location).all()
+        return location
+
+
+
+
 
 
 
