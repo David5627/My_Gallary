@@ -72,6 +72,11 @@ class Image(models.Model):
 
 
 
+    @classmethod
+    def getimageById(cls, id):
+        image = cls.objects.filter(id=id).all()
+        return image
+
 
 
 
