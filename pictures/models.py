@@ -66,6 +66,10 @@ class Image(models.Model):
 
 
 
+    @classmethod
+    def updateImage(cls, id, value):
+        cls.objects.filter(id=id).update(image=value)
+
 
 
 
