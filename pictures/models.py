@@ -25,3 +25,13 @@ class Location(models.Model):
 class Category(models.Model):
     categoryName = models.CharField(max_length=30)
 
+
+    def saveCategory(self):
+        self.save()
+
+
+
+
+
+        
+
