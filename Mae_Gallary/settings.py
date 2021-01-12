@@ -12,9 +12,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 
 from pathlib import Path
 import os
-import django_heroku
-import dj_database_url
-from decouple import config,Csv
+# import django_heroku,Csv
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -81,21 +79,23 @@ WSGI_APPLICATION = 'Mae_Gallary.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
-
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME':  'gallary',
-#         'USER':  'moringa',
-#         'PASSWORD': 'Access',
-#     }
-# }
+#dev
 
 DATABASES = {
-       'default': dj_database_url.config(
-           default=config('DATABASE_URL')
-       )
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME':  'gallary',
+        'USER':  'moringa',
+        'PASSWORD': 'Access',
+    }
 }
+
+#production
+# DATABASES = {
+#        'default': dj_database_url.config(
+#            default=config('DATABASE_URL')
+#        )
+# }
 
 
 
@@ -151,3 +151,5 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 
 # STATIC_URL = '/static/'
+
+

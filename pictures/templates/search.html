@@ -1,16 +1,16 @@
 {%extends 'base.html'%}
-<div class="" style="font-size: 20px; font-family: 'Itim', cursive;">
+<div class="" style="font-size: 20px;">
     {% block content %}
     <div class="container-fluid">
 
 
         <div class="">
-            <div class="jumbotron jumbotron-fluid mt-3">
+            <div class="container">
                 {% if pictures%}
                 <div class="container">
                     <h1 class="text-center"> Found {{ pictures|length }} of searched term {{message}}</h1>
                     {%else%}
-                    <h2 class="lead"> Found 0 picture category for the search term {{message}}</h2>
+                    <h2 class="lead"> No pics found for this category {{message}}</h2>
                 </div>
                 {% endif %}
             </div>
@@ -26,7 +26,7 @@
                 <div class="card">
 
                     <!--Card image-->
-                    <div class="view overlay">
+                    <div class="">
                         <a data-toggle="modal" data-target="#picId{{pic.id}}">
                             <img src="{{pic.image.url}}" class="card-img-top img-responsive styled"" alt=" image"
                                 width="100p">

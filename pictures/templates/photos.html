@@ -4,16 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gallery</title>
+    <title></title>
 </head>
 
 <body>
-    <div class="" style="font-size: 20px;">
+    <div class="container" style="font-size: 20px;">
         {%extends 'base.html' %}
 
         {% block content %}
         {{block.super}}
-        <h1 class='text-center'> My_Gallery</h1> 
+        <h1 class='text-center'></h1> 
         {%for location in locations %}
         <a href="/location/{{location.locationName}}" class="pl-3"> {{location.locationName}}</a> 
         {%endfor%}
@@ -59,7 +59,7 @@
                                         <div class="col-sm">Category: {{pic.imageCategory}}</div>
                                     </div>
 
-                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Exit</button>
                                 </div>
                             </div>
                         </div>
