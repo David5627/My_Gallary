@@ -1,16 +1,16 @@
 {%extends 'base.html'%}
-<div class="" style="font-size: 20px; font-family: 'Itim', cursive;">
+<div class="">
     {% block content %}
     <div class="container-fluid">
 
 
         <div class="">
-            <div class="jumbotron jumbotron-fluid mt-3">
+            <div class="">
                 {% if pictures%}
                 <div class="container">
-                    <h1 class="text-center"> Found {{ pictures|length }} of searched term {{message}}</h1>
+                    <h1 class="text-center"> Found {{ pictures|length }}  {{message}} pictures in gallary</h1>
                     {%else%}
-                    <h2 class="lead"> Found 0 picture category for the search term {{message}}</h2>
+                    <h2> {{message}} or the category searched doesn't exist in gallary</h2>
                 </div>
                 {% endif %}
             </div>
@@ -27,16 +27,13 @@
 
                     <!--Card image-->
                     <div class="view overlay">
-                        <a data-toggle="modal" data-target="#picId{{pic.id}}">
-                            <img src="{{pic.image.url}}" class="card-img-top img-responsive styled"" alt=" image"
-                                width="100p">
-                        </a>
+                        <a data-toggle="modal" data-target="#picId{{pic.id}}"><img src="{{pic.image.url}}"  alt=" image"width="100%"></a>
                     </div>
                 </div>
                 <!--/.Card-->
 
                 <!-- Modal -->
-                <div class="modal fade" id="picId{{pic.id}}" tabindex="-1" role="dialog"
+                <div class="modal" id="picId{{pic.id}}" tabindex="-1" role="dialog"
                     aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="modal-dialog .modal-dialog-scrollable" role="document">
                         <div class="modal-content">
