@@ -13,12 +13,12 @@
 
         {% block content %}
         {{block.super}}
-        <h1 class='text-center'> My_Gallery</h1> 
+        <h1 class='text-center'></h1> 
         {%for location in locations %}
         <a href="/location/{{location.locationName}}" class="pl-3"> {{location.locationName}}</a> 
         {%endfor%}
         <hr>
-        <div class="container-fluid">
+        <div class="container">
             <div class="row">
                 {%for pic in pics%}
                 <div class="col-md-3 mb-3">
@@ -59,7 +59,7 @@
                                         <div class="col-sm">Category: {{pic.imageCategory}}</div>
                                     </div>
 
-                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Exit</button>
                                 </div>
                             </div>
                         </div>
