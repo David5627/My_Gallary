@@ -92,7 +92,7 @@ WSGI_APPLICATION = 'Mae_Gallary.wsgi.application'
 # }
 
 
-# production
+# # production
 DATABASES = {
        'default': dj_database_url.config(
            default=config('DATABASE_URL')
