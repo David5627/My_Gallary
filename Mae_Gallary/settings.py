@@ -82,22 +82,22 @@ WSGI_APPLICATION = 'Mae_Gallary.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME':  'gallary',
-#         'USER':  'moringa',
-#         'PASSWORD': 'Access',
-#     }
-# }
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME':  'gallary',
+        'USER':  'moringa',
+        'PASSWORD': 'Access',
+    }
+}
 
 
 # production
-DATABASES = {
-       'default': dj_database_url.config(
-           default=config('DATABASE_URL')
-       )
-   }
+# DATABASES = {
+#        'default': dj_database_url.config(
+#            default=config('DATABASE_URL')
+#        )
+#    }
 
 
 
