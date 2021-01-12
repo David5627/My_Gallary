@@ -12,9 +12,9 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 
 from pathlib import Path
 import os
+import django_heroku
 import dj_database_url
 from decouple import config,Csv
-import django_heroku
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -30,7 +30,7 @@ SECRET_KEY = 'v)nsju1si98*g^e7m-ojo(r)mr&+z#mvp03+nd2hdhk@zd#5xi'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['.localhost', '.herokuapp.com', '.127.0.0.1']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -91,13 +91,14 @@ WSGI_APPLICATION = 'Mae_Gallary.wsgi.application'
 #     }
 # }
 
-
-# # production
 DATABASES = {
        'default': dj_database_url.config(
            default=config('DATABASE_URL')
        )
-   }
+}
+
+
+
 
 
 
